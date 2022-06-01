@@ -31,8 +31,9 @@ unsigned int antSoma3(int n) {
 }
 
 int main() {
-	int x;
-	char c;
+	int x; unsigned int run = 1;
+	char c,runC;
+	while (run == 1){ 
 	printf("-------------------------------------------------------------------\n");
 	printf("Insira uma letra ('a/b/c/d/e' ou 't' para rodar todas de uma vez): ");
 	scanf("%c",&c);
@@ -42,23 +43,23 @@ int main() {
 
 	switch (c){
 	case 'a':
- 	printf("%d! = %d\n\n", x, fact(x));
+ 	printf("%d! = %d\n", x, fact(x));
 	break;
-
+	
 	case 'b':
- 	printf("b(%d) = %d\n\n", x, somaFt(x));
+ 	printf("b(%d) = %d\n", x, somaFt(x));
 	break;
 	
 	case 'c':
- 	printf("c(%d) = %d\n\n", x, soma3(x));
+ 	printf("c(%d) = %d\n", x, soma3(x));
 	break;
 	
 	case 'd':
- 	printf("d(%d) = %d\n\n", x, dupl3(x));
+ 	printf("d(%d) = %d\n", x, dupl3(x));
 	break;
 	
 	case 'e':
- 	printf("e(%d) = %d\n\n", x, antSoma3(x));
+ 	printf("e(%d) = %d\n", x, antSoma3(x));
 	break;
 	
 	case 't':
@@ -66,10 +67,16 @@ int main() {
  	printf("b(%d) = %d\n", x, somaFt(x));
  	printf("c(%d) = %d\n", x, soma3(x));
  	printf("d(%d) = %d\n", x, dupl3(x));
- 	printf("e(%d) = %d\n\n", x, antSoma3(x));
+ 	printf("e(%d) = %d\n", x, antSoma3(x));
 	break;
 	}
-	
+	getchar();
+	printf("\nContinuar? (s/n): ");
+    scanf("%c", &runC);
+    if (runC == 'n') {
+      run = 0;
+    }
+  getchar();
+}
 	return 0;
 }
-
