@@ -71,12 +71,13 @@ int main() {
 	break;
 	}
 	getchar();
+	
 	printf("\nContinuar? (s/n): ");
-    scanf("%c", &runC);
-    if (runC == 'n') {
-      run = 0;
-    }
-  getchar();
+	scanf("%c", &runC);
+	if (runC == 'n') {
+		run = 0;
+	}
+	getchar();
 }
 	return 0;
 }
